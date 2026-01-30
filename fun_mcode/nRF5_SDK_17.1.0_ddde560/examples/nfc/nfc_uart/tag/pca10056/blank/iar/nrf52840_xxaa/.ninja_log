@@ -1,0 +1,26 @@
+# ninja log v5
+851	2542	7908458364402350	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/None/system_nrf52840.o	1248c2d2f4f3653e
+1444	2881	7908458364091890	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Drivers/nrf_nvic.o	ff670f7648e0d309
+1146	3227	7908458363971892	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Drivers/nrf_soc.o	16a1be651c470203
+4428	6512	7908458403836873	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/app_error.o	c351b97280ee4068
+5478	7622	7908458411395450	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/app_error_handler_iar.o	e471e76c1588ce12
+6548	8685	7908458422588805	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/hardfault_implementation.o	90c910d9b0e77bc6
+7324	9069	7908458432499108	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_assert.o	d37a77e1e633ae90
+6977	9419	7908458432629166	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Segger_RTT/SEGGER_RTT_Syscalls_IAR.o	ae3224da750c2007
+7661	9778	7908458436733527	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/app_fifo.o	8f4adeac11c9199f
+8390	10165	7908458443445563	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/app_util_platform.o	6a65fb52a77c41db
+8048	10504	7908458443475523	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/hardfault_handler_iar.o	27259894c5641670
+9459	10952	7908458451359948	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_fprintf.o	4649881e2d489136
+8724	11299	7908458451539870	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_memobj.o	dad731c9b9310a7e
+9108	11637	7908458452595292	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_fprintf_format.o	31c31e3216a05442
+10544	11990	7908458455242164	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_strerror.o	eb39c756a8846a0a
+10205	12323	7908458455352197	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_atomic.o	ca2f9c95b7f7e1e3
+9816	12675	7908458462230852	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_balloc.o	7dcaeb8c28456c90
+10990	13190	7908458473714764	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Log/nrf_log_default_backends.o	31d9ce4dd8fefabe
+11677	13533	7908458474309874	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Libraries/nrf_ringbuf.o	e953f9f1412caf48
+12712	13869	7908458475962747	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Segger_RTT/SEGGER_RTT.o	9f40032d55c731ab
+11338	14202	7908458473859910	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Log/nrf_log_backend_serial.o	356cb68b27d8490
+12362	14697	7908458476162625	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Log/nrf_log_frontend.o	7fb72f4efa8c9ee3
+14243	14863	7908458490544340	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/None/iar_startup_nrf52840.o	5a94f95a573ecef3
+13228	15018	7908458492027636	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Log/nrf_log_str_formatter.o	a1227dd92316725f
+13909	15066	7908458492429551	D:/ARF_Code/fun_mcode/nRF5_SDK_17.1.0_ddde560/examples/nfc/nfc_uart/tag/pca10056/blank/iar/_build/nRF_Segger_RTT/SEGGER_RTT_printf.o	274ac4e6f950e07d
