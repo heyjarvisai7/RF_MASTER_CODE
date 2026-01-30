@@ -757,8 +757,8 @@ static void diagnostic_tx(uint8_t neighbour, uint8_t circle)
     header.circle_array[Current_Circle] = addr_prefix[0];
 
     memcpy(tx_payload.data, &header, sizeof(header));
-    memcpy(tx_payload.data + sizeof(header), "HAI", sizeof("HAI"));
-    tx_payload.length = sizeof(header) + sizeof("HAI");
+    memcpy(tx_payload.data + sizeof(header), "Hello", sizeof("Hello"));
+    tx_payload.length = sizeof(header) + sizeof("Hello");
 
     if (nrf_esb_write_payload(&tx_payload) == NRF_SUCCESS)
     {
