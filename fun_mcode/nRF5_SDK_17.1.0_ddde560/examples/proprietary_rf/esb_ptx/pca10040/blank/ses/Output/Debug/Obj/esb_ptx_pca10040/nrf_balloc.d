@@ -1,5 +1,5 @@
 Output/Debug/Obj/esb_ptx_pca10040/nrf_balloc.o: \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\libraries\balloc\nrf_balloc.c \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\libraries\balloc\nrf_balloc.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/__SEGGER_RTL.h \
@@ -32,7 +32,7 @@ Output/Debug/Obj/esb_ptx_pca10040/nrf_balloc.o: \
  ../../../../../../components/libraries/util/nrf_assert.h \
  ../../../../../../components/libraries/experimental_section_vars/nrf_section.h \
  ../../../../../../components/libraries/util/nordic_common.h \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\libraries\balloc\nrf_balloc.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\libraries\balloc\nrf_balloc.h \
  ../../../../../../components/libraries/util/sdk_errors.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  ../../../../../../components/libraries/util/app_error.h \

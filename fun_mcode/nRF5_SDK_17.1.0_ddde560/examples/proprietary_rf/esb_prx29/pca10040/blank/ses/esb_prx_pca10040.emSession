@@ -68,7 +68,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="748" useTextEdit="1" path="../../../main.c" left="0" selected="1" top="737" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="43" y="288" useTextEdit="1" path="../../../main.c" left="0" selected="1" top="270" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="esb_prx_pca10040" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

@@ -185,7 +185,9 @@ uint8_t Nxt_table_index;
 uint8_t Prev_table_index;
 uint8_t neighbour_no;
 
-;
+uint8_t circlearr1[500];
+
+
 
 
 struct Packet_Header header;
@@ -271,49 +273,127 @@ void Construct_DLMS_Packet(void)
                     
   NRF_LOG_FLUSH();
 }
+
+
+#define RX_QUEUE_SIZE     7
+#define APP_BUF_SIZE      500  
+
+typedef struct
+{
+    uint8_t  data[APP_BUF_SIZE];
+    uint16_t length;
+} rx_packet_t;
+
+
+volatile rx_packet_t rx_queue[RX_QUEUE_SIZE];
+volatile uint8_t rx_head = 0;
+volatile uint8_t rx_tail = 0;
+volatile uint8_t rx_count = 0;
+
+
+
+bool rx_queue_push(uint8_t *in_data, uint16_t in_len)
+{
+    uint8_t next = (rx_head + 1) % RX_QUEUE_SIZE;
+
+    // Queue full → drop packet
+    if (next == rx_tail)
+        return false;
+
+    memcpy((void *)rx_queue[rx_head].data, in_data, in_len);
+    rx_queue[rx_head].length = in_len;
+    rx_head = next;
+    rx_count++;
+
+    return true;
+}
+
+
+bool rx_queue_pop(uint8_t *out_buf)
+{
+    uint8_t i;
+
+    if (rx_count == 0)
+        return false; 
+    
+    memcpy(out_buf, (void *)rx_queue[0].data, rx_queue[0].length);
+
+    
+    for (i = 1; i < rx_count; i++)
+    {
+        rx_queue[i - 1] = rx_queue[i];
+    }
+
+    rx_count--;   
+    return true;
+}
+
+void checkPacketAndCnt(void)
+{
+      rx_queue_pop(circlearr1);
+      if(circlearr1[POS_PACKET_TYPE] == DATA_PACKET)
+      {
+          if(circlearr1[(POS_CIRCLE_ARRAY+ Current_Circle ) + 1] != 0)
+          {
+               check_direction(circlearr);
+          }
+         else
+         {
+            Construct_DLMS_Packet();
+         }
+      }
+
+      pingPacket();
+}
+
+
+
+
 void nrf_esb_event_handler(nrf_esb_evt_t const * p_event)
 {
     switch (p_event->evt_id)
     {
         case NRF_ESB_EVENT_TX_SUCCESS:
-            NRF_LOG_DEBUG("TX SUCCESS EVENT");
-            NRF_LOG_FLUSH();
-             Ack_Txing = 1;
-             NRF_LOG_FLUSH();
-            break;
-        case NRF_ESB_EVENT_TX_FAILED:
-            NRF_LOG_DEBUG("TX FAILED EVENT");
-             NRF_LOG_FLUSH();
-             if(tx_payload.data[POS_PACKET_TYPE] == PING_PACKET)
-             {
-                 neighbour_no++;
-             }
-             else
-             {   // if rx packet is data packet
-                  reRouting();
-             }
-             NRF_LOG_FLUSH();
-            break;
-        case NRF_ESB_EVENT_RX_RECEIVED:
-            {
 
-                if (nrf_esb_read_rx_payload(&rx_payload) == NRF_SUCCESS)
+                NRF_LOG_DEBUG("TX SUCCESS EVENT");
+                NRF_LOG_FLUSH();
+                Ack_Txing = 1;
+                NRF_LOG_FLUSH();
+
+        break;
+
+        case NRF_ESB_EVENT_TX_FAILED:
+
+                NRF_LOG_DEBUG("TX FAILED EVENT");
+                NRF_LOG_FLUSH();
+                if(tx_payload.data[POS_PACKET_TYPE] == PING_PACKET)
                 {
-                   circlearr = rx_payload.data;
-                   if(circlearr[POS_PACKET_TYPE] == 0)
-                   {
-                        if(circlearr[(POS_CIRCLE_ARRAY+ Current_Circle ) + 1] != 0)
-                        {
-                             check_direction(circlearr);
-                        }
-                       else
-                       {
-                          Construct_DLMS_Packet();
-                       }
-                   }
-                   pingPacket();
-                }  
-            }break;
+                   neighbour_no++;
+                }
+                else
+                {   // if rx packet is data packet
+                    reRouting();
+                }
+                NRF_LOG_FLUSH();
+
+        break;
+
+        case NRF_ESB_EVENT_RX_RECEIVED:
+
+                    if (nrf_esb_read_rx_payload(&rx_payload) == NRF_SUCCESS)
+                    {
+                       circlearr = rx_payload.data;
+
+                       /*Need to store in comming packets*/
+
+                       rx_queue_push(rx_payload.data, rx_payload.length);
+
+                       checkPacketAndCnt();
+
+                       
+                    }  
+
+          break;
            
 #if 0      
             if (nrf_esb_read_rx_payload(&rx_payload) == NRF_SUCCESS)
@@ -502,7 +582,7 @@ void reRouting(void)
 
 void pingPacket(void)
 {
-          if(circlearr[POS_PACKET_TYPE] == 1  && circlearr[POS_LENGTH] == 0)
+          if(circlearr1[POS_PACKET_TYPE] == 1  && circlearr1[POS_LENGTH] == 0)
           {
                 memcpy(&advertisment_pcket,rx_payload.data + sizeof(header), sizeof(advertisment_pcket));
                 if(rx_payload.rssi > 0 && Nxt_table_index < MAX_NEIGHBORS && advertisment_pcket.circle_no == Current_Circle +1)
@@ -521,7 +601,7 @@ void pingPacket(void)
                 Ack_Txing = 0;
 
           }
-          if(circlearr[POS_PACKET_TYPE] == 1  && circlearr[POS_LENGTH] == 1)
+          if(circlearr1[POS_PACKET_TYPE] == 1  && circlearr1[POS_LENGTH] == 1)
           {
                 advertisment_pcket.circle_no = Current_Circle;
                 advertisment_pcket.node_id = addr_prefix[0];

@@ -1,6 +1,6 @@
 Output/Debug/Obj/esb_ptx_pca10040/nrfx_atomic.o: \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\modules\nrfx\soc\nrfx_atomic.c \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\modules\nrfx\soc\nrfx_atomic.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\modules\nrfx\soc\nrfx_atomic.c \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\modules\nrfx\soc\nrfx_atomic.h \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \
  ../../../../../../modules/nrfx/drivers/nrfx_common.h \
@@ -47,4 +47,4 @@ Output/Debug/Obj/esb_ptx_pca10040/nrfx_atomic.o: \
  ../../../../../../components/libraries/util/sdk_resources.h \
  ../../../../../../components/proprietary_rf/esb/nrf_esb_resources.h \
  ../../../../../../modules/nrfx/drivers/nrfx_errors.h \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\modules\nrfx\soc\nrfx_atomic_internal.h
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\modules\nrfx\soc\nrfx_atomic_internal.h

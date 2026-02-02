@@ -1,7 +1,7 @@
 Output/Debug/Obj/esb_ptx_pca10040/SEGGER_RTT.o: \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\external\segger_rtt\SEGGER_RTT.c \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\external\segger_rtt\SEGGER_RTT.h \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\external\segger_rtt\SEGGER_RTT_Conf.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\external\segger_rtt\SEGGER_RTT.c \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\external\segger_rtt\SEGGER_RTT.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\external\segger_rtt\SEGGER_RTT_Conf.h \
  ../../../../../../components/libraries/util/nordic_common.h \
  ../../../../../../components/libraries/util/app_util_platform.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/stdint.h \

@@ -1,7 +1,7 @@
 Output/Debug/Obj/esb_ptx_pca10040/nrf_esb.o: \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\proprietary_rf\esb\nrf_esb.c \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\proprietary_rf\esb\nrf_esb.c \
  ../../../../../../components/drivers_nrf/nrf_soc_nosd/nrf_error.h \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\proprietary_rf\esb\nrf_esb.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\proprietary_rf\esb\nrf_esb.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/stdbool.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/__SEGGER_RTL.h \
@@ -24,7 +24,7 @@ Output/Debug/Obj/esb_ptx_pca10040/nrf_esb.o: \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/stddef.h \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/nordic_common.h \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\proprietary_rf\esb\nrf_esb_error_codes.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\proprietary_rf\esb\nrf_esb_error_codes.h \
  ../../../../../../modules/nrfx/hal/nrf_gpio.h \
  ../../../../../../modules/nrfx/nrfx.h \
  ../../../../../../integration/nrfx/nrfx_config.h ../config/sdk_config.h \

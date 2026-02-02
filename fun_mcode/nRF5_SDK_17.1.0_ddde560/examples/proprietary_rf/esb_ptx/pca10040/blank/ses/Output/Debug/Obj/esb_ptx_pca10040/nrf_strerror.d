@@ -1,5 +1,5 @@
 Output/Debug/Obj/esb_ptx_pca10040/nrf_strerror.o: \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\libraries\strerror\nrf_strerror.c \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\libraries\strerror\nrf_strerror.c \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ 8.24/include/__SEGGER_RTL.h \
@@ -30,5 +30,5 @@ Output/Debug/Obj/esb_ptx_pca10040/nrf_strerror.o: \
  ../../../../../../modules/nrfx/mdk/compiler_abstraction.h \
  ../../../../../../components/libraries/util/sdk_macros.h \
  ../../../../../../components/libraries/util/nrf_assert.h \
- D:\rfmodulemaster_node\nRF5_SDK_17.1.0_ddde560\components\libraries\strerror\nrf_strerror.h \
+ D:\GIT\RF_Master29\fun_mcode\nRF5_SDK_17.1.0_ddde560\components\libraries\strerror\nrf_strerror.h \
  ../../../../../../components/libraries/util/sdk_errors.h
