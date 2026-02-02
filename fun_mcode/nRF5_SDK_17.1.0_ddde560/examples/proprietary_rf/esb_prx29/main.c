@@ -573,53 +573,6 @@ void nrf_set_txmode(void)
 }
 
 
-void scan_device(uint8_t length)
-{
-    uint8_t i, k = 0, l = 0;
- 
-     for(i = 0 ;i <= 0xFF ; i++)
-     {
-          NRF_LOG_DEBUG("Transmitting packet %02x", tx_payload.data[1]);
-          NRF_LOG_FLUSH();
- 
-          tx_payload.noack = false;
-          if (nrf_esb_write_payload(&tx_payload) == NRF_SUCCESS)
-          {
-              nrf_gpio_pin_write(LED_1, !(tx_payload.data[1]%8>0 && tx_payload.data[1]%8<=4));
-              nrf_gpio_pin_write(LED_2, !(tx_payload.data[1]%8>1 && tx_payload.data[1]%8<=5));
-              nrf_gpio_pin_write(LED_3, !(tx_payload.data[1]%8>2 && tx_payload.data[1]%8<=6));
-              nrf_gpio_pin_write(LED_4, !(tx_payload.data[1]%8>3));
-              tx_payload.data[1]++;
-          }
-          else
-          {
-              NRF_LOG_INFO("Sending packet failed");
-              NRF_LOG_FLUSH();
-          }
- 
-          nrf_delay_us(50000);
-
- 
-          if(Ack_Txing == 1)
-          {
-              Ack_Txing = 0;
-              Actd[k++] = i;
-          }
- 
-         if(k >= length)
-         {
-            break;
-         }
-
-          set_slave_adress(i, arrays[Current_Circle - 1]);
-     }
- 
-     NRF_LOG_INFO("Scan done");
-     NRF_LOG_FLUSH();
- 
-}
-
-
 uint32_t esb_init( void )
 {
 
